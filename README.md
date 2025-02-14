@@ -4,6 +4,18 @@
 ## Generated APK Using Github Action
 ![image](/docs/image/apk-generated.png)
 
+## Generate Apollo Schemes
+### Format
+```shell
+./gradlew downloadApolloSchema --endpoint='<link-graphql>' --schema='app/src/main/graphql/<package-name>/schema.json'
+````
+
+
+### Sample
+```shell
+./gradlew downloadApolloSchema --endpoint='https://countries.trevorblades.com/graphql' --schema='app/src/main/graphql/com/qomunal/opensource/androidresearch/schema.json'
+```
+
 
 ## Colaborator
 Very open to anyone, I'll write your name under this, please contribute by sending an email to me

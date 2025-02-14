@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.ksp)
+    alias(libs.plugins.apollo)
     id("kotlin-parcelize")
 }
 
@@ -49,6 +50,12 @@ android {
     }
 }
 
+apollo {
+    service("service") {
+        packageName.set(ProjectSetting.PACKAGE_NAME)
+    }
+}
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -70,6 +77,8 @@ dependencies {
     implementation(libs.androidx.lifecycle.service)
     implementation(libs.androidx.lifecycle.process)
     implementation(libs.androidx.lifecycle.reactivestreams.ktx)
+
+    implementation(libs.apollo.runtime)
 
     testImplementation(libs.androidx.core.testing)
     testImplementation (libs.androidx.lifecycle.runtime.testing)
