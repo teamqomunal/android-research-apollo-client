@@ -6,6 +6,12 @@ plugins {
     id("kotlin-parcelize")
 }
 
+apollo {
+    service("service") {
+        packageName.set(ProjectSetting.PACKAGE_NAME)
+    }
+}
+
 android {
     namespace = ProjectSetting.PACKAGE_NAME
     compileSdk = 35
@@ -50,12 +56,6 @@ android {
     }
 }
 
-apollo {
-    service("service") {
-        packageName.set(ProjectSetting.PACKAGE_NAME)
-    }
-}
-
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -79,6 +79,8 @@ dependencies {
     implementation(libs.androidx.lifecycle.reactivestreams.ktx)
 
     implementation(libs.apollo.runtime)
+    implementation(libs.apollo.api)
+    implementation(libs.apollo.normalized.cache.sqlite)
 
     testImplementation(libs.androidx.core.testing)
     testImplementation (libs.androidx.lifecycle.runtime.testing)
