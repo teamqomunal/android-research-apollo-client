@@ -2,13 +2,20 @@ package com.qomunal.opensource.androidresearch.ui.main
 
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.qomunal.opensource.androidresearch.common.base.BaseActivity
 import com.qomunal.opensource.androidresearch.common.ext.showToast
 import com.qomunal.opensource.androidresearch.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     private val viewModel: MainViewModel by viewModels()
+
+    private val mAdapter: MainAdapter by lazy {
+        MainAdapter()
+    }
     private val router: MainRouter by lazy {
         MainRouter(this)
     }
@@ -19,19 +26,21 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        viewModel.getDummies()
     }
 
     override fun initUI() {
         binding.apply {
-            btnTest.setOnClickListener {
-                showToast("Yes u click on me")
-            }
+            rv.adapter = mAdapter
+            rv.layoutManager = LinearLayoutManager(this@MainActivity, LinearLayoutManager.VERTICAL, false)
         }
     }
 
     override fun initObserver() {
         viewModel.apply {
-
+            dummiesState.observe(this@MainActivity) {
+                mAdapter.asyncListDiffer.submitList(it)
+            }
         }
     }
 

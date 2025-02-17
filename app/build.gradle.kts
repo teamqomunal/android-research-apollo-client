@@ -3,7 +3,9 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.ksp)
     alias(libs.plugins.apollo)
+    id("com.google.dagger.hilt.android")
     id("kotlin-parcelize")
+
 }
 
 apollo {
@@ -62,6 +64,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.recyclerview)
 
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.fragment.ktx)
@@ -78,9 +81,31 @@ dependencies {
     implementation(libs.androidx.lifecycle.process)
     implementation(libs.androidx.lifecycle.reactivestreams.ktx)
 
+    implementation(libs.google.gson)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+    implementation(libs.okhttp3.logging.interceptor)
+
+    implementation(libs.hilt.android)
+
     implementation(libs.apollo.runtime)
     implementation(libs.apollo.api)
     implementation(libs.apollo.normalized.cache.sqlite)
+
+    // Glide
+    implementation(libs.glide)
+
+    // Skip this if you don"t want to use integration libraries or configure Glide.
+    ksp(libs.glide.compiler)
+
+    implementation(libs.google.gson)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+    implementation(libs.okhttp3.logging.interceptor)
+
+    implementation(libs.hilt.android)
+
+    ksp(libs.hilt.android.compiler)
 
     testImplementation(libs.androidx.core.testing)
     testImplementation (libs.androidx.lifecycle.runtime.testing)
