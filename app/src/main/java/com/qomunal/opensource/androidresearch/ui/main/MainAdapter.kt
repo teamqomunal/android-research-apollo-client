@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.qomunal.opensource.androidresearch.databinding.ItemMainBinding
 import com.qomunal.opensource.androidresearch.model.CountryModel
-import com.qomunal.opensource.androidresearch.model.SimpleCountryModel
 
 /**
  * Created by faisalamircs on 17/02/2025
@@ -59,7 +58,11 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.MainHolder>() {
 
         fun bind(data: CountryModel) {
             binding.apply {
-                tvTitle.text = data.name
+                tvName.text = data.name
+                tvFlag.text = data.emoji
+                tvCode.text = data.code
+                tvCurency.text = data.currency
+                tvNative.text = data.native
             }
         }
 
