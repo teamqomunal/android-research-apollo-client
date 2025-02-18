@@ -1,7 +1,9 @@
 package com.qomunal.opensource.androidresearch.domain
 
+import com.google.gson.JsonObject
 import okhttp3.ResponseBody
 import retrofit2.Response
+import retrofit2.http.Body
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.Headers
@@ -23,6 +25,12 @@ interface ApiService {
     @POST("/graphql")
     suspend fun graphql(
         @Field("query") query: String,
+    ): Response<ResponseBody>
+
+    @Headers("Content-Type: application/json")
+    @POST("/")
+    suspend fun graphql(
+        @Body body: JsonObject
     ): Response<ResponseBody>
 
 }

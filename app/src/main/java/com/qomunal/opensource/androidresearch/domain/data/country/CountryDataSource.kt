@@ -1,6 +1,7 @@
 package com.qomunal.opensource.androidresearch.domain.data.country
 
 import com.qomunal.opensource.androidresearch.common.ext.fromJson
+import com.qomunal.opensource.androidresearch.common.ext.graphqlBody
 import com.qomunal.opensource.androidresearch.domain.ApiService
 import com.qomunal.opensource.androidresearch.domain.GraphqlResponse
 import com.qomunal.opensource.androidresearch.domain.Resource
@@ -31,7 +32,7 @@ class CountryDataSource @Inject constructor(
     suspend fun getCountries(): Flow<Resource<GetCountriesResponse>> = flow {
         try {
             emit(Resource.Loading())
-            val request = apiService.graphql(CountryGraphQL.getCountries())
+            val request = apiService.graphql(graphqlBody(CountryGraphQL.getCountries()))
             val response = fromJson<GraphqlResponse<GetCountriesResponse>>(request.body()?.string())
             if (response.isError()) {
                 emit(Resource.Error(response.getErrorMessage()))
@@ -47,7 +48,7 @@ class CountryDataSource @Inject constructor(
     suspend fun getCountry(code: String): Flow<Resource<GetCountryResponse>> = flow {
         try {
             emit(Resource.Loading())
-            val request = apiService.graphql(CountryGraphQL.getCountry(code))
+            val request = apiService.graphql(graphqlBody(CountryGraphQL.getCountry(code)))
             val response = fromJson<GraphqlResponse<GetCountryResponse>>(request.body()?.string())
             if (response.isError()) {
                 emit(Resource.Error(response.getErrorMessage()))
