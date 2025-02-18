@@ -1,6 +1,5 @@
-package com.qomunal.opensource.androidresearch.domain.data.country
+package com.qomunal.opensource.androidresearch.domain
 
-import com.qomunal.opensource.androidresearch.domain.data.country.response.CountryResponse
 import com.qomunal.opensource.androidresearch.model.CountryModel
 
 /**

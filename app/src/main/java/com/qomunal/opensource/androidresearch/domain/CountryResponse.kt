@@ -1,4 +1,4 @@
-package com.qomunal.opensource.androidresearch.domain.data.country.response
+package com.qomunal.opensource.androidresearch.domain
 
 import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName

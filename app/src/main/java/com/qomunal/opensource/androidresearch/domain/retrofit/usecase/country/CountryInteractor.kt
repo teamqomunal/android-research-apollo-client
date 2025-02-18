@@ -1,7 +1,7 @@
-package com.qomunal.opensource.androidresearch.domain.usecase.country
+package com.qomunal.opensource.androidresearch.domain.retrofit.usecase.country
 
-import com.qomunal.opensource.androidresearch.domain.Resource
-import com.qomunal.opensource.androidresearch.domain.repository.country.ICountryRepository
+import com.qomunal.opensource.androidresearch.domain.retrofit.Resource
+import com.qomunal.opensource.androidresearch.domain.retrofit.repository.country.ICountryRepository
 import com.qomunal.opensource.androidresearch.model.CountryModel
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject

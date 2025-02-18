@@ -1,8 +1,8 @@
-package com.qomunal.opensource.androidresearch.domain.repository.country
+package com.qomunal.opensource.androidresearch.domain.retrofit.repository.country
 
-import com.qomunal.opensource.androidresearch.domain.Resource
-import com.qomunal.opensource.androidresearch.domain.data.country.CountryDataSource
-import com.qomunal.opensource.androidresearch.domain.data.country.CountryMapper
+import com.qomunal.opensource.androidresearch.domain.CountryMapper
+import com.qomunal.opensource.androidresearch.domain.retrofit.Resource
+import com.qomunal.opensource.androidresearch.domain.retrofit.data.country.CountryDataSource
 import com.qomunal.opensource.androidresearch.model.CountryModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map

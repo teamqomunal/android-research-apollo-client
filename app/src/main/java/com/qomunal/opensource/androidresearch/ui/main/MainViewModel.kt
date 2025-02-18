@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.qomunal.opensource.androidresearch.common.base.BaseViewModel
-import com.qomunal.opensource.androidresearch.domain.Resource
-import com.qomunal.opensource.androidresearch.domain.usecase.country.CountryUseCase
+import com.qomunal.opensource.androidresearch.domain.retrofit.Resource
+import com.qomunal.opensource.androidresearch.domain.retrofit.usecase.country.CountryUseCase
 import com.qomunal.opensource.androidresearch.model.CountryModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn

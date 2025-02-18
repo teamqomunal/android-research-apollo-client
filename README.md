@@ -59,15 +59,17 @@ dependencies {
 
 ```
 
-### Generate Apollo Schemes
+### Generate Apollo Schemes (select one json / graphqls)
 #### Format
 ```shell
 ./gradlew downloadApolloSchema --endpoint='<link-graphql>' --schema='app/src/main/graphql/<package-name>/schema.json'
+./gradlew downloadApolloSchema --endpoint='<link-graphql>' --schema='app/src/main/graphql/<package-name>/schema.graphqls'
 ````
 
 #### Sample
 ```shell
 ./gradlew downloadApolloSchema --endpoint='https://countries.trevorblades.com/graphql' --schema='app/src/main/graphql/com/qomunal/opensource/androidresearch/schema.json'
+./gradlew downloadApolloSchema --endpoint='https://countries.trevorblades.com/graphql' --schema='app/src/main/graphql/com/qomunal/opensource/androidresearch/schema.graphqls'
 ```
 
 

@@ -1,7 +1,8 @@
-package com.qomunal.opensource.androidresearch.domain.data.country.response
+package com.qomunal.opensource.androidresearch.domain.retrofit.data.country.response
 
 import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
+import com.qomunal.opensource.androidresearch.domain.CountryResponse
 
 /**
  * Created by faisalamircs on 18/02/2025

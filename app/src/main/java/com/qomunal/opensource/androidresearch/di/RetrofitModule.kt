@@ -3,7 +3,7 @@ package com.qomunal.opensource.androidresearch.di
 import android.content.Context
 import com.chuckerteam.chucker.api.ChuckerInterceptor
 import com.google.gson.GsonBuilder
-import com.qomunal.opensource.androidresearch.domain.ApiService
+import com.qomunal.opensource.androidresearch.domain.retrofit.ApiService
 import com.qomunal.opensource.androidresearch.util.Constant
 import dagger.Module
 import dagger.Provides
@@ -11,12 +11,9 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
-import okhttp3.ResponseBody
 import okhttp3.logging.HttpLoggingInterceptor
-import retrofit2.Converter
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.lang.reflect.Type
 import java.util.concurrent.TimeUnit
 
 /**

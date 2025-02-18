@@ -1,7 +1,7 @@
 package com.qomunal.opensource.androidresearch.di
 
-import com.qomunal.opensource.androidresearch.domain.repository.country.CountryRepository
-import com.qomunal.opensource.androidresearch.domain.repository.country.ICountryRepository
+import com.qomunal.opensource.androidresearch.domain.retrofit.repository.country.CountryRepository
+import com.qomunal.opensource.androidresearch.domain.retrofit.repository.country.ICountryRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

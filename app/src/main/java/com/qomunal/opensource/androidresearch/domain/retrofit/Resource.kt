@@ -1,4 +1,4 @@
-package com.qomunal.opensource.androidresearch.domain
+package com.qomunal.opensource.androidresearch.domain.retrofit
 
 import androidx.annotation.Keep
 

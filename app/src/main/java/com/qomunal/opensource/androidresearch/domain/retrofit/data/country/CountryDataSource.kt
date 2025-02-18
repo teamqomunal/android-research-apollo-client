@@ -1,13 +1,13 @@
-package com.qomunal.opensource.androidresearch.domain.data.country
+package com.qomunal.opensource.androidresearch.domain.retrofit.data.country
 
 import com.qomunal.opensource.androidresearch.common.ext.fromJson
 import com.qomunal.opensource.androidresearch.common.ext.graphqlBody
-import com.qomunal.opensource.androidresearch.domain.ApiService
-import com.qomunal.opensource.androidresearch.domain.GraphqlResponse
-import com.qomunal.opensource.androidresearch.domain.Resource
-import com.qomunal.opensource.androidresearch.domain.data.country.graphql.CountryGraphQL
-import com.qomunal.opensource.androidresearch.domain.data.country.response.GetCountriesResponse
-import com.qomunal.opensource.androidresearch.domain.data.country.response.GetCountryResponse
+import com.qomunal.opensource.androidresearch.domain.retrofit.ApiService
+import com.qomunal.opensource.androidresearch.domain.retrofit.GraphqlResponse
+import com.qomunal.opensource.androidresearch.domain.retrofit.Resource
+import com.qomunal.opensource.androidresearch.domain.retrofit.data.country.graphql.CountryGraphQL
+import com.qomunal.opensource.androidresearch.domain.retrofit.data.country.response.GetCountriesResponse
+import com.qomunal.opensource.androidresearch.domain.retrofit.data.country.response.GetCountryResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

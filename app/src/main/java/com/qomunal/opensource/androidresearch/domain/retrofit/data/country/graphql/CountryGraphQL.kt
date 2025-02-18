@@ -1,4 +1,4 @@
-package com.qomunal.opensource.androidresearch.domain.data.country.graphql
+package com.qomunal.opensource.androidresearch.domain.retrofit.data.country.graphql
 
 /**
  * Created by faisalamircs on 18/02/2025

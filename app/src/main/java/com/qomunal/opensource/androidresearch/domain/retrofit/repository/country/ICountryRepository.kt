@@ -1,6 +1,6 @@
-package com.qomunal.opensource.androidresearch.domain.usecase.country
+package com.qomunal.opensource.androidresearch.domain.retrofit.repository.country
 
-import com.qomunal.opensource.androidresearch.domain.Resource
+import com.qomunal.opensource.androidresearch.domain.retrofit.Resource
 import com.qomunal.opensource.androidresearch.model.CountryModel
 import kotlinx.coroutines.flow.Flow
 
@@ -14,7 +14,7 @@ import kotlinx.coroutines.flow.Flow
  */
 
 
-interface CountryUseCase {
+interface ICountryRepository {
 
     suspend fun getCountries(): Flow<Resource<List<CountryModel>>>
 

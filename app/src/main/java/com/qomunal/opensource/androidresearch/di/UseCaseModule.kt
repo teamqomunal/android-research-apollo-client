@@ -1,7 +1,7 @@
 package com.qomunal.opensource.androidresearch.di
 
-import com.qomunal.opensource.androidresearch.domain.usecase.country.CountryInteractor
-import com.qomunal.opensource.androidresearch.domain.usecase.country.CountryUseCase
+import com.qomunal.opensource.androidresearch.domain.retrofit.usecase.country.CountryInteractor
+import com.qomunal.opensource.androidresearch.domain.retrofit.usecase.country.CountryUseCase
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

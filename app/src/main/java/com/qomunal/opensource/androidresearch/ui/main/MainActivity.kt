@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.qomunal.opensource.androidresearch.common.base.BaseActivity
 import com.qomunal.opensource.androidresearch.common.ext.showToast
 import com.qomunal.opensource.androidresearch.databinding.ActivityMainBinding
-import com.qomunal.opensource.androidresearch.domain.Resource
+import com.qomunal.opensource.androidresearch.domain.retrofit.Resource
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
