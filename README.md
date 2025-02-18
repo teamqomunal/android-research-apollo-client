@@ -1,11 +1,13 @@
-## Android Research Tech
-- Template repository for doing research on Android Technologies
+## Android Retrofit Apollo Client
+- Fetch GraphQL API using Apollo Client and Retrofit ClientR
 
 ## Generated APK Using Github Action
 ![image](/docs/image/apk-generated.png)
 
 ## Using Public GraphQL API
 - [Countries API](https://studio.apollographql.com/public/countries/variant/current/home)
+- [Playground API](https://studio.apollographql.com/public/countries/variant/current/explorer)
+- [Playground API](https://countries.trevorblades.com/graphql)
 
 ## Get Started Apollo Client for Android
 - [Apollo Client](https://www.apollographql.com/docs/android/)
