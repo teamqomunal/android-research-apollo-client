@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.qomunal.opensource.androidresearch.common.base.BaseActivity
 import com.qomunal.opensource.androidresearch.common.ext.showToast
 import com.qomunal.opensource.androidresearch.databinding.ActivityMainBinding
+import com.qomunal.opensource.androidresearch.domain.Resource
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -26,7 +27,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.getDummies()
+        viewModel.getCountries()
     }
 
     override fun initUI() {
@@ -38,8 +39,21 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun initObserver() {
         viewModel.apply {
-            dummiesState.observe(this@MainActivity) {
-                mAdapter.asyncListDiffer.submitList(it)
+
+            countriesState.observe(this@MainActivity) {
+                when (it) {
+                    is Resource.Loading -> {
+                        showToast("Loading")
+                    }
+                    is Resource.Success -> {
+                        it.data?.let { countries ->
+                            mAdapter.asyncListDiffer.submitList(countries.toMutableList())
+                        }
+                    }
+                    is Resource.Error -> {
+                        showToast(it.message.toString())
+                    }
+                }
             }
         }
     }

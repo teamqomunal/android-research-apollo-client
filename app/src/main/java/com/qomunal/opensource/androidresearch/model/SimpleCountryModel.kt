@@ -6,7 +6,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 @Keep
-data class SimpleCountry(
+data class SimpleCountryModel(
     var code: String = "",
     var name: String = "",
     var emoji: String = "",

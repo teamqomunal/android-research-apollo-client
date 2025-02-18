@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.qomunal.opensource.androidresearch.databinding.ItemMainBinding
-import com.qomunal.opensource.androidresearch.model.SimpleCountry
+import com.qomunal.opensource.androidresearch.model.CountryModel
+import com.qomunal.opensource.androidresearch.model.SimpleCountryModel
 
 /**
  * Created by faisalamircs on 17/02/2025
@@ -21,14 +22,14 @@ import com.qomunal.opensource.androidresearch.model.SimpleCountry
 class MainAdapter : RecyclerView.Adapter<MainAdapter.MainHolder>() {
 
     val asyncListDiffer =
-        AsyncListDiffer(this, object : DiffUtil.ItemCallback<SimpleCountry>() {
-            override fun areItemsTheSame(oldItem: SimpleCountry, newItem: SimpleCountry): Boolean {
+        AsyncListDiffer(this, object : DiffUtil.ItemCallback<CountryModel>() {
+            override fun areItemsTheSame(oldItem: CountryModel, newItem: CountryModel): Boolean {
                 return oldItem.code == newItem.code
             }
 
             override fun areContentsTheSame(
-                oldItem: SimpleCountry,
-                newItem: SimpleCountry,
+                oldItem: CountryModel,
+                newItem: CountryModel,
             ): Boolean {
                 return oldItem == newItem
             }
@@ -56,7 +57,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.MainHolder>() {
     inner class MainHolder(private val binding: ItemMainBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(data: SimpleCountry) {
+        fun bind(data: CountryModel) {
             binding.apply {
                 tvTitle.text = data.name
             }
